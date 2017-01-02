@@ -14,16 +14,22 @@
 
     font-family: Roboto, sans-serif;
     font-weight: 400;
-    font-size: 20pt;
-    word-spacing: 0.1em;
-    letter-spacing: 0.1em;
     line-height: 1.5em;
 }
 
 body {
+    font-size: 20pt;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+body > p, body > h2, body > blockquote {
     width: 960px;
     margin-left: auto;
     margin-right: auto;
+}
+
+body {
     margin-bottom: 8rem;
 }
 
@@ -64,12 +70,13 @@ h1 {
 
 h2 {
     margin-top: 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     padding: 2rem;
     background-color: #5D94FB;
     background-color: #4D84EB;
     color: white;
     border: 4px solid white;
+    font-size: 120%;
 }
 
 h2 > div {
@@ -106,11 +113,20 @@ p#subtitle {
 }
 
 p {
-    text-align: justify;
+    /*text-align: justify;*/
+}
+
+p + p,
+blockquote + p {
+    text-indent: 2em;
+}
+
+p#subtitle + p {
+    text-indent: 0;
 }
 
 h3 {
-    margin-top: 2rem;
+    margin-top: 4rem;
     border-bottom: 2px solid white;
 }
 
@@ -135,7 +151,20 @@ blockquote > ul:last-child > li:last-child > p::after {
     content: close-quote;
 }
 
+blockquote > ol:last-child > li:last-child > p::after {
+    content: close-quote;
+}
+
+blockquote li > p {
+    margin: 0;
+}
+
+blockquote#tech-past-quote > p {
+    text-align: center;
+}
+
 div.commentary {
+    font-size: 80%;
     margin-top: 2rem;
     margin-bottom: 4rem;
 }
@@ -153,6 +182,13 @@ div.commentary > div::before {
     content: "— ";
 }
 
-li {
+ul > li {
     list-style-type: "•  ";
+}
+
+div.commentary-section {
+    display: flex;
+}
+
+div.commentary-column {
 }

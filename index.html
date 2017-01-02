@@ -65,8 +65,8 @@
   from Rust's Creator, Graydon Hoare:
 </p>
 
-<blockquote>
-  <p>Technology from the past come to save the future from itself.</p>
+<blockquote id="tech-past-quote">
+  <p>Technology from the past<br>come to save the future from itself.</p>
 </blockquote>
 
 <p>
@@ -98,6 +98,9 @@
 </p>
 
 <h3>Selected commentary</h3>
+
+<div class="commentary-section">
+<div class="commentary-column">
 
 <div class="commentary">
   <blockquote>
@@ -169,6 +172,47 @@
 
   <div><a href="https://www.reddit.com/r/rust/comments/5krhr0/rust_is_more_than_safety/dbqhghp/">Jacksonmills</a></div>
 </div>
+
+<div class="commentary">
+  <blockquote>
+    <ol>
+      <li>Fast program execution. Sometimes you just want the speed
+        that a scripting language cannot provide. Although I have to
+        admit that many times Python is fast enough. I also pick D
+        sometimes to write fast "scripts".
+
+      <li>Reliability. Rust is a language that puts an emphasis on
+        correct and reliable programs. The compiler does a great job
+        at pointing me at pieces of code that I should think about
+        again. It is similar to Haskell in that "if it compiles, it is
+        likely correct". You pay upfront for long "talk to the
+        compiler" sessions, but from experience I'd say that it pays
+        off.
+
+      <li>A language that is a joy to use. There are some really great
+        languages that I love to use. They include Clojure, Lua,
+        Python and Rust. The first two languages are mostly the
+        products from single inventors with good taste plus a couple
+        of contributors. The last two are the product of their
+        respective communities. The Rust community tries to bring
+        together the best ideas and lessons from different programming
+        languages and has a democratic development process that tries
+        to create a language and an ecosystem that is nice to use and
+        plays well together with Rust's goals.
+
+      <li>A new language with stable releases. I like to try new
+        programming languages from time to time. It is cool that you
+        can pick between stable, beta and nightly, depending on your
+        stability needs. Furthermore, you can count on Rust being
+        around for longer because Mozilla is supporting the language.
+    </ol>
+  </blockquote>
+
+  <div><a href="https://news.ycombinator.com/item?id=13273306">xling</a></div>
+</div>
+
+</div>
+<div class="commentary-column">
 
 <div class="commentary">
   <blockquote>
@@ -299,19 +343,8 @@
   <div><a href="https://www.reddit.com/r/rust/comments/5krhr0/rust_is_more_than_safety/dbqkt50/">Chowmeined</a></div>
 </div>
 
-<div class="commentary">
-  <blockquote>
-    <p>Speaking of non-programmers, nobody cares what language you
-      use. All they care about is the results. What Rust really needs
-      is a killer feature. Not a language feature. Something Rust does
-      uniquely well, and would require non-trivial work to port to
-      $language_we_know_already. For instance, Ruby had Rails. Without
-      Rails, I've never heard of Ruby. Python latched onto machine
-      learning and is riding that wave. Rust needs its "thing".</p>
-  </blockquote>
-
-  <div><a href="https://www.reddit.com/r/rust/comments/5krhr0/rust_is_more_than_safety/dbq90d9/">Hot2</a></div>
 </div>
+<div class="commentary-column">
 
 <div class="commentary">
   <blockquote>
@@ -380,3 +413,89 @@
 
   <div><a href="https://news.ycombinator.com/item?id=13272779">aschampion</a></div>
 </div>
+
+<div class="commentary">
+  <blockquote>
+    <p>Speaking of non-programmers, nobody cares what language you
+      use. All they care about is the results. What Rust really needs
+      is a killer feature. Not a language feature. Something Rust does
+      uniquely well, and would require non-trivial work to port to
+      $language_we_know_already. For instance, Ruby had Rails. Without
+      Rails, I've never heard of Ruby. Python latched onto machine
+      learning and is riding that wave. Rust needs its "thing".</p>
+  </blockquote>
+
+  <div><a href="https://www.reddit.com/r/rust/comments/5krhr0/rust_is_more_than_safety/dbq90d9/">Hot2</a></div>
+</div>
+
+<div class="commentary">
+  <blockquote>
+    <p>One of my favorite things about Rust is one of the practical
+      applications of the safety. Specifically, it's that I can write
+      multithreaded code without fear because the compiler won't let me get
+      it wrong. It's far far far too easy to screw up multithreaded code if
+      you're using any kind of shared data, and Rust is the only language I
+      know of that truly makes it safe without compromising on performance.</p>
+
+    <p>As a trivial example, some time ago I fixed a subtle threading bug in
+      fish-shell. The code used RAII and lock guards, which is good, but in
+      this particular case the lock guard was created using the wrong
+      lock. So it was locking, it just wasn't locking the correct lock,
+      meaning the data it was mutating was subject to a data race. As I
+      fixed that, I found myself wishing the program had been written in
+      Rust, because that sort of bug simply won't happen in Rust.</p>
+  </blockquote>
+
+  <div><a href="https://news.ycombinator.com/item?id=13272694">eridius</a></div>
+</div>
+
+<div class="commentary">
+  <blockquote>
+    <p>As someone who's been in the system programming space for a while and
+      played with Rust for ~1.5 years here's my highlights.</p>
+
+    <ol>
+      <li>I haven't written any multithreading code yet but I love the
+        borrow-checker since it does a fantastic job of dealing with
+        mutable state. I find I get better architected programs with
+        single-ownership long before I start writing Rust and I love
+        to see the compiler enforce it.
+
+      <li>ADTs. Simply the best way to represent State + Data bar
+        none. Combine with pattern matching and it's just sublime.
+
+      <li>Iterators. Never seen a language do them so well with so
+        little overhead. The focus on zero-cost abstractions really
+        shines here.
+
+      <li>Cross platform support. This is a huge one. Having dealt
+        with MSCV/GCC/LLVM/custom compiler toolchains I can't stress
+        to wonderful it is to have a consistent compiler that can
+        build other targets on a different host.
+
+      <li>Cargo, other people have covered it, enough said.
+
+      <li><p>The community. Truly one of the better ones out there who
+        not only want to help but also provides releases like
+        clockwork with clear semantics on stability and APIs.
+    </ol>
+  </blockquote>
+
+  <div><a href="https://news.ycombinator.com/user?id=vvanders">vvanders</a></div>
+</div>
+
+</div> <!-- commentary-column -->
+</div> <!-- commentary-section -->
+
+<h2>
+  <img src="fireflower2.png">
+
+  <a href="http://graydon2.dreamwidth.org/247406.html">"Rust is mostly safety"</a>
+  &nbsp;•&nbsp; Graydon Hoare
+
+  <div>
+    Comment threads:
+    <a href="https://www.reddit.com/r/rust/comments/5kwg1e/rust_is_mostly_safety/">/r/rust</a>
+    <a href="http://news.ycombinator.com/item?id=13276996">hn</a>
+  </div>
+</h2>
