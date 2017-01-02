@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do');
+@import url('https://fonts.googleapis.com/css?family=La+Belle+Aurore');
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush');
+@import url('https://fonts.googleapis.com/css?family=Arizonia');
+@import url('https://fonts.googleapis.com/css?family=Mr+De+Haviland');
+@import url('https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield');
+@import url('https://fonts.googleapis.com/css?family=Miss+Fajardose');
+@import url('https://fonts.googleapis.com/css?family=Mr+Dafoe');
+
+* {
+    background-color: #F83800;
+    color: white;
+
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 20pt;
+    word-spacing: 0.1em;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+}
+
+body {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8rem;
+}
+
+em, a {
+    color: #FFA044; /* this is actual fireflower orange */
+    color: #FFE044; /* this is the eyes-searing yellow we need */
+    font-weight: 700;
+    font-style: normal;
+}
+
+body img {
+    width: 400px;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+}
+
+h1 {
+    font-family: "Mr De Haviland", cursive;
+    font-family: "Mr Dafoe", cursive;
+
+    font-family: "Alex Brush", cursive;
+    font-family: "Arizonia", cursive;
+
+    font-family: "Mrs Saint Delafield", cursive;
+    font-family: "Nothing You Could Do", cursive;
+    font-family: "Miss Fajardose", cursive;
+    font-family: "La Belle Aurore", cursive;
+
+    font-size: 300%;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    color: #FFE044;
+}
+
+h2 {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: #5D94FB;
+    background-color: #4D84EB;
+    color: white;
+    border: 4px solid white;
+}
+
+h2 > div {
+    margin-top: 1rem;
+    background-color: #5D94FB;
+    background-color: #4D84EB;
+    color: white;
+}
+
+h2 a {
+    color: #FFE044;
+}
+
+h2 > div > a {
+    margin-left: 1em;
+}
+
+h2 > img {
+    display: float;
+    float: left;
+    background-color: #5D94FB;
+    background-color: #4D84EB;
+    width: 100px;
+    height: 100px;
+    margin: 0px;
+    margin-right: 2rem;
+}
+
+p#subtitle {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
+p {
+    text-align: justify;
+}
+
+h3 {
+    margin-top: 2rem;
+    border-bottom: 2px solid white;
+}
+
+blockquote {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+div.commentary {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+div.commentary > blockquote {
+    font-style: italic;
+}
+
+div.commentary > blockquote > p:first-child::before {
+    content: open-quote;
+}
+
+div.commentary > blockquote > p:last-child::after {
+    content: close-quote;
+}
+
+div.commentary > div {
+    text-align: right;
+    margin-right: 2rem;
+}
+
+div.commentary > div::before {
+    content: "— ";
+}

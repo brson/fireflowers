@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+
+<title>TODO</title>
+<meta name="keywords" content="TODO">
+<meta name="description" content="TODO">
+
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="fireflowers.css">
+
+<img src="fireflower2.png">
+
+<h1>fireflowers</h1>
+
+<p id="subtitle">
+  <em><a href="https://www.rust-lang.org">The Rust Programming Language</a></em>
+  <br>
+  in the words of its practitioners.
+</p>
+
+<p>
+  Rust is a <em><a href="TODO">systems language</a></em> that has
+  become notable for being <em>memory safe without garbage
+  collection</em>. It was designed to solve problems observed
+  maintaining the millions of lines of C++ in the Firefox web
+  browser. It is fast, reliable, and runs on most anything, and its
+  enthusiasts are exceptionally enthusiastic about its potential.
+</p>
+
+<p>
+  On December 29, 2016, Steve Klabnik, author of
+  <a href="todo">The Rust Book</a>
+  and member of the Rust core team, blogged,
+  <a href="TODO">"Rust is more than safety"</a>, lamenting that memory
+  safety alone is not compelling for some number of prospective Rust
+  users. This resulted in a blogsplosion the likes of which
+  Rustaceans had never seen (and Rustaceans love blogging), where
+  Rust's creators and users offered their opinions about what makes
+  Rust so amazing.
+</p>
+
+<p>
+  This is a summary of that.
+</p>
+
+<h2>
+  <img src="fireflower2.png">
+  
+  <a href="http://words.steveklabnik.com/rust-is-more-than-safety">"Rust is more than safety"</a>
+  &nbsp;·&nbsp; Steve Klabnik
+
+  <div>
+    Comment threads:
+    <a href="https://www.reddit.com/r/rust/comments/5krhr0/rust_is_more_than_safety/">/r/rust</a>
+    <a href="http://news.ycombinator.com/item?id=13272474">hn</a>
+  </div>
+</h2>
+
+<p>
+  In this initial post (the match that ignited the blogsplosion),
+  Steve emphasizes that "Rust is most well-known for its features around writing <em>low-level code</em> in a safer way than its predecessors. But it’s also a lot more than that."
+  He suggests that Rust brings established modern programming language
+  theory to the domain of systems programming, emphasizing a Rust slogan
+  of Rust's Creator, Graydon Hoare:
+</p>
+
+<blockquote>
+<em>Technology from the past come to save the future from itself.</em>
+</blockquote>
+
+<p>
+  The rediscovery and application of old, reliable, and sometimes
+  forgotten technology is one of the themes the name "Rust" evokes.
+  Rust applies some established techniques from academia to
+  industry. Steve doesn't elaborate, but two obvious examples are that
+  Rust includes <em>algebraic data types</em>, common in the ML family
+  of languages, and in Rust known as "enums"; and <em>traits</em>,
+  which enable polymorphism similar to Haskell's type classes, but
+  fairly unlike C++ classes and templates. Of course, Where Rust
+  innovates is by <em>statically tracking ownership and lifetimes of
+  variables and their references</em>. The ownership system enables
+  Rust to automatically deallocate and run destructors on all values
+  immediately when they go out of scope, and prevents values from
+  being accessed after they go out of scope. It is what makes Rust
+  memory safe and thread safe, and why it doesn't need a GC to
+  accomplish that.
+</p>
+
+<p>
+  And that's cool. But, as Steve goes on to say, "your marketing
+  should be focused on what problems your product solves for the
+  consumer". Being memory safe (i.e. "not crashing") is nice, but many
+  programmers that enjoy garbage collectors enjoy that comfort today,
+  and some C and C++ programmers are dismissive of the value of memory
+  safety, possibly believing they have a handle on the matters of
+  memory management and concurrency.
+</p>
+
+<h3>Selected commentary</h3>
+
+<div class="commentary">
+  <blockquote>
+    <p>Rust makes it easier to write correct and readable code, and
+      getting both at the same time is not a coincidence.</p>
+
+    <p>The very mechanisms of ownership/borrowing (a tight control
+      over lifetime, aliasing and mutability) enforce a certain
+      simplicity in the data-flow of the resulting software that you
+      could get in other programming languages, but generally do not
+      because the language was more lenient and you got away with a
+      more convoluted flow.</p>
+
+    <p>Have you ever had to debug a ConcurrentModificationException in
+      Java?  This happens when you modify a container being iterated
+      over. When you have a chain of callbacks/observers, it's
+      incredibly easy to accidentally have a circular reference
+      leading to this exception. In Rust, to get to this situation you
+      have to use RefCell or equivalent, and it should make you
+      pause.</p>
+  </blockquote>
+
+  <div><a href="https://www.reddit.com/r/rust/comments/5krhr0/rust_is_more_than_safety/dbq2xb5/">Matthieum</a></div>
+</div>
+
+<div class="commentary">
+  <blockquote>
+    <p>Another thing I love with Rust is its balance between ease of use and
+      fastness. Not only there are lots of high level features that are
+      really cool in the language, but cargo/crates.io makes publishing a
+      package very easy; while dynamically typed languages might seem easier
+      sometimes I feel that if you are not rigorous (and I'm not, see the
+      beginning of this comment :p) it's difficult to buy medium-scaled
+      projects in them; and at the same time Rust is fast, and even when
+      performances aren't critical, well, it's always good, plus in my
+      experience some thing that isn't performance-critical can quickly
+      become it (e.g. it doesn't matter if it takes 10ms or 100 when you run
+      something as a command line, but then you're like "hey I could turn
+      that into a webservice too" and it starts to matter).</p>
+
+    <p>There are a few languages I am quite familiar with, and some that I
+      really like, but Rust is the one I found the most empowering.The
+      problem with "safety" is that in programming when I read that word I
+      tend to think that it's something for low-level stuff or things that
+      can have security issues and I don't usually need that, but in the end
+      I think that safety also leads to confidence: my code might not be
+      best written, but with the compiler I can be confident that it's
+      relatively correct (obviously it can't catch everything but well),
+      which isn't the case with most other languages.</p>
+  </blockquote>
+
+  <div><a href="https://www.reddit.com/r/rust/comments/5krhr0/rust_is_more_than_safety/dbq7mwa/">Lise_henry</a></div>
+</div>
+
+<div class="commentary">
+  <blockquote>
+    <p>The borrow checker is amazing! I hated it at first, but ownership and
+      lifetimes don't just bring sense to multithreaded and concurrent
+      programming, they also make your own data designs so much cleaner!</p>
+
+    <p>Rust, through ownership, effectively enforces the higher-level single
+      responsibility principle that sometimes is a struggle to be consistent
+      about in other languages. That alone is amazing.</p>
+
+    <p>But for me, what really gets me is how expressive it can be and yet it
+      seems like we lose nothing in terms of security, reliability,
+      predictability and efficiency. That's just a dream.</p>
+  </blockquote>
+
+  <div><a href="https://www.reddit.com/r/rust/comments/5krhr0/rust_is_more_than_safety/dbqhghp/">Jacksonmills</a></div>
+</div>
+
+<div class="commentary">
+  <blockquote>
+    <p>You emphasized the C/C++, completely skipped out on ML.</p>
+
+    <p>Which I think is a huge part that people miss out when "marketing
+      rust." IMO, one of the biggest strengths of rust is the abstractions
+      it provides. The HM type system, the functional semantics, etc.</p>
+
+    <p>The ML heritage makes Rust one hell of a beast at abstraction -- and
+      that makes it an extremely powerful language.</p>
+
+    <p>[...]</p>
+
+    <p>At the same time, Rust's syntax is familiar and comfortable. They've
+      done a great job of giving the power of ML, and making it as easy to
+      use as C-like languages. It's very accessible.</p>
+  </blockquote>
+
+  <div><a href="">BrainDeadUnit</a></div>
+</div>
