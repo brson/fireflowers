@@ -19,6 +19,9 @@
   in the words of its practitioners.
 </p>
 
+
+
+
 <div class="post-section">
 
 <p>
@@ -34,12 +37,11 @@
   On December 29, 2016, Steve Klabnik, author of
   <a href="todo">The Rust Book</a>
   and member of the Rust core team, blogged,
-  <a href="TODO">"Rust is more than safety"</a>, lamenting that memory
-  safety alone is not compelling for some number of prospective Rust
-  users. This resulted in a blogsplosion the likes of which
-  Rustaceans had never seen (and Rustaceans love blogging), where
-  Rust's creators and users offered their opinions about what makes
-  Rust so amazing.
+  <a href="TODO">"Rust is more than safety"</a>, saying that memory
+  safety alone is not convincing for some prospective Rust users. This
+  resulted in a blogsplosion the likes of which Rustaceans had never
+  seen (and Rustaceans love blogging), where Rust's creators and users
+  offered their opinions about what makes Rust so amazing.
 </p>
 
 <p>
@@ -47,6 +49,10 @@
 </p>
 
 </div> <!-- post-section -->
+
+
+
+
 <div class="post-section">
 
 <h2>
@@ -103,6 +109,10 @@
 </p>
 
 </div> <!-- post-section -->
+
+
+
+
 
 <h3>Selected commentary</h3>
 
@@ -494,6 +504,9 @@
 </div> <!-- commentary-column -->
 </div> <!-- commentary-section -->
 
+
+
+
 <div class="post-section">
 
 <h2>
@@ -514,7 +527,8 @@
   pretty cool, and the importance and meaning of "safety". In this
   response, Graydon Hoare, Rust's erstwhile creator, reminds us that
   "Safety in the systems space is Rust's raison d'être. Especially
-  safe concurrency."
+  safe concurrency"
+  (or <a href="https://blog.rust-lang.org/2015/04/10/Fearless-Concurrency.html">"fearless concurrency"</a>).
 </p>
 
 <p>
@@ -523,7 +537,7 @@
 </p>
 
 <blockquote>
-  <p>
+  <p><em>
     When someone says they "don't have safety problems" in C++, I am
     astonished: a statement that must be made in ignorance, if not
     outright negligence. The fact of the matter is that the further down
@@ -534,11 +548,11 @@
     every day the toll in human misery increases. Billions of dollars,
     countless lives lost. Can one really say "I don't have safety
     problems" in systems programming?"
-  </p>
+  </em></p>
 </blockquote>
 
 <p>
-  He asserts strongly that "Rust's success in raising the bar for
+  He asserts that "Rust's success in raising the bar for
   safe, concurrent systems programming &mdash; in ways that the niche finds
   usable, performant and compatible &mdash; cannot (imo) be
   overstated. That is its purpose, and that has been its great
@@ -546,6 +560,10 @@
 </p>
 
 </div> <!-- post-section -->
+
+
+
+
 
 <h3>Selected commentary</h3>
 
@@ -562,7 +580,29 @@
 
   <div><a href="https://www.reddit.com/r/rust/comments/5kwg1e/rust_is_mostly_safety/dbr5jao/">Steveklabnik1</a></div>
 </div>
-  
+
+<div class="commentary">
+  <blockquote>
+    <p><em>I would argue that if the Rust project would have just one mission
+      statement, it wouldn't be "create a safe systems programming
+      language". It would be "move towards a world where safe systems
+      programming is the norm".</em></p>
+
+    <p>What's the difference? Both of the statements have the premise
+      that Rust is – and ought to be – a safe systems programming
+      language. However, the latter captures not only the REAL goal,
+      but also the nuances and tensions: while safety is
+      indispensable, we must do something else too, for the
+      programming society to accept the safe tools we are trying to
+      promote. That means ergonomics, that means performance, that
+      means ease of use, that means wide availability – and that might
+      also mean advocation of visions of a better world, which is what
+      this blog post of Graydon's does.</p>
+  </blockquote>
+
+  <div><a href="https://news.ycombinator.com/item?id=13277246">GolDDranks</a></div>
+</div>
+
 </div>
 <div class="commentary-column">
 
@@ -591,6 +631,31 @@
   <div><a href="https://www.reddit.com/r/rust/comments/5kwg1e/rust_is_mostly_safety/dbr7k7b/">Dochtman</a></div>
 </div>
   
+<div class="commentary">
+  <blockquote>
+    <p><em>Rust gives you fearlessness in all the things, but it does mean
+      learning new style and discovering new solutions to old
+      problems</em>. To fully understand 'Send' vs. 'Sync', for example,
+      means really groking the Rust type system. Once you get the type
+      system, then fully utilizing it with the expressive generics
+      becomes unlocked, and then at that point you've transcended from
+      Rust dabbler to fully fearless Rust user.</p>
+
+    <p>Once this world of development is unlocked to you it is
+      mind-blowing, but it is a journey to get there, and not everyone
+      will have the heart to make it. It comes in stages, is
+      wonderfully rewarding, will make you a better programmer in you
+      other favorite languages, but I think we should be careful with
+      statements like 'Rust makes it easy'.</p>
+
+    <p>It does make hard things easy, but only after you've fully embraced
+      Rust. This feels more accurate: <em>"Hey, you know that thing that's
+      really hard for you? Rust makes it fun."</em></p>
+  </blockquote>
+
+  <div><a href="https://news.ycombinator.com/item?id=13277197">bluejekyll</a></div>
+</div>
+
 </div>
 <div class="commentary-column">
 
@@ -628,6 +693,103 @@
 
   <div><a href="https://news.ycombinator.com/item?id=13277686">agentgt</a></div>
 </div>
+
+</div> <!-- commentary-column -->
+</div> <!-- commentary-section -->
+
+
+
+
+<div class="post-section">
+
+<h2>
+  <img src="fireflower2.png">
+
+  <a href="https://thefeedbackloop.xyz/safety-is-rusts-fireflower/">"Safety is Rust's fireflower"</a>
+  &nbsp;•&nbsp; Dave Herman
+
+  <div>
+    Comment threads:
+    <a href="https://www.reddit.com/r/rust/comments/5kx099/safety_is_rusts_fireflower/">/r/rust</a>
+  </div>
+</h2>
+
+<p>
+  So this is where we come to fireflowers. Dave Herman is one of the
+  principles in charge of Mozilla Research, is largely responsible for
+  keeping Rust funded over the years, and he likes vivid metaphores.
+</p>
+
+<p>
+  The fireflower in the title references a slide from Samuel Hulick,
+  in which Mario (the customer) + a Fire Flower (the product) yields
+  Fire Mario (a powerful and happy customer). And Dave's point is that
+  <em>safety is the Fire Flower that enables Rust developers to be Fire
+  Mario</em>.
+</p>
+
+<p>
+  He then goes on to talk about the superpowers the Rust fire flower
+  gives to Rust Fire Marios:
+</p>
+
+<blockquote>
+  <p>So what's badass about programming in Rust? I think it's being a
+    systems programmer. There's nothing a systems programmer can't do:
+    write an OS from scratch; drive micro-controllers; outcompete the
+    fastest software in a crowded category; it's all within reach.</p>
+
+  <p>But for most programmers, the prospect of writing C or C++ code
+    &mdash; and certainly the thought of actually shipping it &mdash;
+    is so terrifying we don't usually even waste much time considering
+    it.</p>
+
+  <p>This is why I believe <em>hack without fear</em> resonates:
+    safety clears one of the biggest obstacles preventing people from
+    seeing themselves as systems programmers.</p>
+</blockquote>
+
+<p>
+  Dave loves the slogan "hack without fear".
+</p>
+
+</div> <!-- post-section -->
+
+
+
+
+<h3>Selected commentary</h3>
+
+<div class="commentary-section">
+<div class="commentary-column">
+
+
+</div>
+<div class="commentary-column">
+
+<div class="commentary">
+  <blockquote>
+    <p>One very important thing that isnt emphasized enough is
+      that <em>Rust makes systems programming accessible</em>.</p>
+
+    <p>With C and C++ the barrier of entry is harder.</p>
+
+    <p>This is huge. This means <em>more devs can become systems
+      programmer</em>. More people writing systems software. I think
+      this is why rust has more success recruiting new devs from
+      higher level languages and newbies than C/C++ devs.</p>
+
+    <p>In that sense, the fire flower makes systems programming
+      accessible. And fire mario are devs who can write system
+      programs.</p>
+  </blockquote>
+
+  <div><a href="https://www.reddit.com/r/rust/comments/5kx099/safety_is_rusts_fireflower/dbs23xm/">Kosinix</a></div>
+</div>
+ 
+</div>
+<div class="commentary-column">
+
 
 </div> <!-- commentary-column -->
 </div> <!-- commentary-section -->

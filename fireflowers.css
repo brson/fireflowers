@@ -133,7 +133,7 @@ p {
 }
 
 p + p,
-blockquote + p {
+blockquote#tech-past-quote + p {
     text-indent: 2em;
 }
 
@@ -219,4 +219,5 @@ div.commentary-section {
 }
 
 div.commentary-column {
+    min-width: 30%;
 }
