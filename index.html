@@ -97,9 +97,9 @@
   should be focused on what problems your product solves for the
   consumer". Being memory safe (i.e. "not crashing") is nice, but many
   programmers of languages with garbage collectors enjoy that comfort
-  today, and some C and C++ programmers are dismissive of the value of
-  memory safety, possibly believing they have a handle on the matters
-  of memory management and concurrency.
+  today, and <em>some C and C++ programmers are dismissive of the
+  value of memory safety</em>, possibly believing they have a handle
+  on the matters of memory management and concurrency.
 </p>
 
 </div> <!-- post-section -->
@@ -518,21 +518,23 @@
 </p>
 
 <p>
-  Graydon does not think favorably of C++ programmers who deny they
-  have problems with memory safety:
+  Graydon has strong words for C++ programmers who deny the importance
+  of memory safety:
 </p>
 
 <blockquote>
-  When someone says they "don't have safety problems" in C++, I am
-  astonished: a statement that must be made in ignorance, if not
-  outright negligence. The fact of the matter is that the further down
-  the software stack one goes, the worse the safety situation
-  gets. Our engineering discipline has this dirty secret, but it is
-  not so secret anymore: every day the world stumbles forward on
-  creaky, malfunctioning, vulnerable, error-prone systems software and
-  every day the toll in human misery increases. Billions of dollars,
-  countless lives lost. Can one really say "I don't have safety
-  problems" in systems programming?"
+  <p>
+    When someone says they "don't have safety problems" in C++, I am
+    astonished: a statement that must be made in ignorance, if not
+    outright negligence. The fact of the matter is that the further down
+    the software stack one goes, the worse the safety situation
+    gets. Our engineering discipline has this dirty secret, but it is
+    not so secret anymore: every day the world stumbles forward on
+    creaky, malfunctioning, vulnerable, error-prone systems software and
+    every day the toll in human misery increases. Billions of dollars,
+    countless lives lost. Can one really say "I don't have safety
+    problems" in systems programming?"
+  </p>
 </blockquote>
 
 <p>
@@ -544,3 +546,88 @@
 </p>
 
 </div> <!-- post-section -->
+
+<h3>Selected commentary</h3>
+
+<div class="commentary-section">
+<div class="commentary-column">
+
+<div class="commentary">
+  <blockquote>
+    <p>I think "fearless concurrency" is a better pitch for Rust than
+      "memory safety." The former is "Hey, you know that thing that's really
+      hard for you? Rust makes it easy." The latter is, as Dave says, "eat
+      your vegetables."</p>
+  </blockquote>
+
+  <div><a href="https://www.reddit.com/r/rust/comments/5kwg1e/rust_is_mostly_safety/dbr5jao/">Steveklabnik1</a></div>
+</div>
+  
+</div>
+<div class="commentary-column">
+
+<div class="commentary">
+  <blockquote>
+    <p>Talking about the safety is fundamentally not so attractive to
+      many of our potential users -- they're either C/C++ people who
+      have evolved coping strategies to deal with all the pitfalls, or
+      they're dynamic language people who get the safety, too, just at
+      a performance cost.</p>
+
+    <p>So, I really like the "fearless" part. For me personally, the
+      "concurrency" part isn't as interesting; really, how much of the
+      code you write on a day-to-day basis needs to reckon with
+      concurrency issues? I would think that's a tiny percentage for
+      most developers. One could argue that this is exactly because
+      concurrency is so bothersome/failure-prone in most existing
+      advantages, but then we're back to the "eat your vegetables"
+      argument.</p>
+
+    <p>So maybe it would be better to talk about "fearless
+      performance", or "fearless zero-cost abstractions", or
+      "low-level control without the hazards".</p>
+  </blockquote>
+
+  <div><a href="https://www.reddit.com/r/rust/comments/5kwg1e/rust_is_mostly_safety/dbr7k7b/">Dochtman</a></div>
+</div>
+  
+</div>
+<div class="commentary-column">
+
+<div class="commentary">
+  <blockquote>
+    <p>I'm a lowly ancient Java programmer and I think Rust is far far
+      more than safety.</p>
+
+    <p>In my opinion Rust is about doing things right. It may have
+      been about safety at first but I think it is more than that
+      given the work of the community.</p>
+
+    <p>Yes I know there is the right tool for the right job and is
+      impossible to fill all use cases but IMO Rust is striving for
+      iPhone like usage.</p>
+
+    <p>I have never seen a more disciplined and balanced community
+      approach to creating PL. Everything seems to be carefully
+      thought out and iterated on. There is a lot to be said to this
+      (although ironically I suppose one could call that safe)!</p>
+
+    <p>PL is more than the language. It is works, community and
+    mindshare.
+
+    <p>If Rust was so concerned with safety I don't think much work
+      would be done on making it so consumable for all with continuous
+      improvements of compiler error messages, easier syntax and
+      improved documentation.</p>
+
+    <p><em>Rust is one of the first languages in a long time that makes
+      you think different.</em></p>
+
+    <p>If it is just safety... safety is one overloaded word.</p>
+  </blockquote>
+
+  <div><a href="https://news.ycombinator.com/item?id=13277686">agentgt</a></div>
+</div>
+
+</div> <!-- commentary-column -->
+</div> <!-- commentary-section -->
