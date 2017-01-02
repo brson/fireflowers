@@ -61,12 +61,12 @@
   In this initial post (the match that ignited the blogsplosion),
   Steve emphasizes that "Rust is most well-known for its features around writing <em>low-level code</em> in a safer way than its predecessors. But it’s also a lot more than that."
   He suggests that Rust brings established modern programming language
-  theory to the domain of systems programming, emphasizing a Rust slogan
-  of Rust's Creator, Graydon Hoare:
+  theory to the domain of systems programming, emphasizing a slogan
+  from Rust's Creator, Graydon Hoare:
 </p>
 
 <blockquote>
-<em>Technology from the past come to save the future from itself.</em>
+  <p>Technology from the past come to save the future from itself.</p>
 </blockquote>
 
 <p>
@@ -77,10 +77,10 @@
   Rust includes <em>algebraic data types</em>, common in the ML family
   of languages, and in Rust known as "enums"; and <em>traits</em>,
   which enable polymorphism similar to Haskell's type classes, but
-  fairly unlike C++ classes and templates. Of course, Where Rust
-  innovates is by <em>statically tracking ownership and lifetimes of
-  variables and their references</em>. The ownership system enables
-  Rust to automatically deallocate and run destructors on all values
+  fairly unlike C++ classes and templates. Rust innovates is
+  by <em>statically tracking ownership and lifetimes of variables and
+  their references</em>. The ownership system enables Rust to
+  automatically deallocate and run destructors on all values
   immediately when they go out of scope, and prevents values from
   being accessed after they go out of scope. It is what makes Rust
   memory safe and thread safe, and why it doesn't need a GC to
@@ -91,10 +91,10 @@
   And that's cool. But, as Steve goes on to say, "your marketing
   should be focused on what problems your product solves for the
   consumer". Being memory safe (i.e. "not crashing") is nice, but many
-  programmers that enjoy garbage collectors enjoy that comfort today,
-  and some C and C++ programmers are dismissive of the value of memory
-  safety, possibly believing they have a handle on the matters of
-  memory management and concurrency.
+  programmers of languages with garbage collectors enjoy that comfort
+  today, and some C and C++ programmers are dismissive of the value of
+  memory safety, possibly believing they have a handle on the matters
+  of memory management and concurrency.
 </p>
 
 <h3>Selected commentary</h3>
@@ -172,21 +172,189 @@
 
 <div class="commentary">
   <blockquote>
-    <p>You emphasized the C/C++, completely skipped out on ML.</p>
+    <p>If C is like playing with knives and C++ is juggling chainsaws,
+      Rust is like parkour suspended from strings&wearing protective
+      gear. It'll look ridiculous at times, but you'll be able to do
+      all sorts of cool moves that would otherwise be damn scary or
+      outright impossible. You'll have so much fun you'll start trying
+      to do it in other languages, too. And many of us never look
+      back.</p>
 
-    <p>Which I think is a huge part that people miss out when "marketing
-      rust." IMO, one of the biggest strengths of rust is the abstractions
-      it provides. The HM type system, the functional semantics, etc.</p>
+    <p>Especially when we hear stories about knife players ending up
+      with a bleeding heart, and that one chainsaw juggler who lost
+      their poodle. At the beginning, you fear the padding will hinder
+      you, but by now you learned that its clever design allows you to
+      move as fast as without it. A bit faster, actually, since you're
+      no longer on the lookout for ledges you might stumble over.</p>
 
-    <p>The ML heritage makes Rust one hell of a beast at abstraction -- and
-      that makes it an extremely powerful language.</p>
+    <p>Also you get new improved gear every six weeks, and between
+      this and your newly built muscles, you start feeling like a
+      super hero. This feeling is amplified by the community, which
+      simultaneously does awesome feats and is really humble and open
+      about it (you're by now accustomed to people being good at
+      concurrency, and get slightly annoyed that your snake-charming
+      friends insist on doing everything one step at a time).</p>
 
-    <p>[...]</p>
+    <p>You also met some folks you wouldn't have expected here, from a number
+      of dynamic languages, braving the learning curve to descend into
+      low-level programming, usually singing Rust's praises with unreal
+      sounding benchmark comparisons.</p>
 
-    <p>At the same time, Rust's syntax is familiar and comfortable. They've
-      done a great job of giving the power of ML, and making it as easy to
-      use as C-like languages. It's very accessible.</p>
+    <p>You start looking with pity at your knive- and
+      chainsaw-wielding friends. You see both their bruises and denial
+      about said bruises. You'd want to offer them some of that
+      awesome protective gear (by now you no longer feel the strings,
+      because they seldom get taut), but you know the answer
+      already. Poor folks.</p>
   </blockquote>
 
-  <div><a href="">BrainDeadUnit</a></div>
+  <div><a href="https://www.reddit.com/r/rust/comments/5krhr0/rust_is_more_than_safety/dbqcpd1/">Llogiq</a></div>
+</div>
+
+<div class="commentary">
+  <blockquote>
+    <p>It's really difficult for me to talk about rust without talking about
+      safety. I write C++ for a living on a relatively large stack. It sucks
+      to hunt down a sporadic double delete. So much.</p>
+
+    <p>One thing I don't think gets touched on enough is how much
+      easier refactoring is because of the borrow checker. I think
+      it's easier to see the lifetime of objects in rust, so it's
+      easier to find blocks of code that can be extracted into a
+      function or structure. It is very nice to be able to bang out
+      some code (that works correctly, thank you borrow checker), and
+      refactor it later on without too much of a hassle.</p>
+  </blockquote>
+
+  <div><a href="https://www.reddit.com/r/rust/comments/5krhr0/rust_is_more_than_safety/dbqehgw/">Vrj</a></div>
+</div>
+
+<div class="commentary">
+  <blockquote>
+    <p>Concrete practical points that might interest a C programmer/engineer:
+      (Those are obviously obvious to /r/rust regulars)</p>
+
+    <ul>
+      <li>The language is relatively small. -- That's rarely mentioned.
+
+      <li>No more wrapping std functions for safety and error-checking. Or
+        banning some of the functions that are deemed dangerous. Or using a
+        complete safe replacement library because you don't trust yourself
+        or others.
+
+      <li>Abstractions are opt-in. Safe guards are opt-out.
+
+      <li>The language is not OOP-centric. You wouldn't be forced into a
+        paradigm that never made sense to you. Or forced to use needless
+        abstractions you never liked.
+
+      <li>You can use native performant libraries freely. You will never have
+        to check if a library is shipped by all major distributions. You
+        don't have to worry about the versions shipped. -- More maturity and
+        completeness in the crate ecosystem is essential here.
+
+      <li>Static checking is (mostly) built-in. You don't have to depend on
+        imperfect proprietary tools/services like Coverity anymore.
+
+      <li>A build tool is included. And the build process is unified and
+        streamlined. No more autotools/CMake/(g|n|b|p|f|s|d)make/etc
+        shenanigans.
+    </ul>
+
+    <p>This relates better, IMHO, to the pain points C users face, than
+      general talk about safety design. Once a user dips their toes in
+      Rust. They will start to grasp the bigger picture.</p>
+  </blockquote>
+
+  <div><a href="https://www.reddit.com/r/rust/comments/5krhr0/rust_is_more_than_safety/dbr5apd/">Acc_test</a></div>
+</div>
+
+<div class="commentary">
+  <blockquote>
+    <p>Rust, to me, has a number of things going for it beyond
+      safety:</p>
+
+    <ul>
+      <li>If it compiles, it works: Rust and Haskell are the only
+        languages I've seen where this has regularly been the case.
+
+      <li>Embedding: I think this is a killer feature. If you want to
+        make a native extension for python, ruby, nodejs or erlang to
+        get some additional performance or to integrate with native
+        libraries rust is a great way to do it. The absence of a GC in
+        rust lets it cooperate with other language runtimes without
+        issues. This is an area where the only other competition has
+        been C or C++.
+
+      <!-- hack <p> element for p::after { content: close-quote } -->
+      <li><p>Dependency management: Rust doesn't just provide a better
+          dependency management situation vs C and C++ but other
+          languages too. I like working with cargo more than pip or npm
+          and because it is the official tool it seems rust will be able
+          to avoid the proliferation and fragmentation of tools that
+          other languages have experienced.</p>
+    </ul>
+  </blockquote>
+
+  <div><a href="https://www.reddit.com/r/rust/comments/5krhr0/rust_is_more_than_safety/dbqkt50/">Chowmeined</a></div>
+</div>
+
+<div class="commentary">
+  <blockquote>
+    <p>Speaking of non-programmers, nobody cares what language you
+      use. All they care about is the results. What Rust really needs
+      is a killer feature. Not a language feature. Something Rust does
+      uniquely well, and would require non-trivial work to port to
+      $language_we_know_already. For instance, Ruby had Rails. Without
+      Rails, I've never heard of Ruby. Python latched onto machine
+      learning and is riding that wave. Rust needs its "thing".</p>
+  </blockquote>
+
+  <div><a href="https://www.reddit.com/r/rust/comments/5krhr0/rust_is_more_than_safety/dbq90d9/">Hot2</a></div>
+</div>
+
+<div class="commentary">
+  <blockquote>
+    <p>Apart from big differences between Java and Rust like memory
+      management (not just GC vs. lifetimes but also stack
+      allocation), approach to threading, and Cargo vs. Maven, Rust is
+      so much nicer in the seemingly little things like:</p>
+
+    <ul>
+      <li>UTF-8 everywhere instead of UTF-16 everywhere.
+
+      <li>Unsigned integers.
+
+      <li>Bytes from I/O being unsigned by convention.
+
+      <!-- hack <p> element for p::after { content: close-quote } -->
+      <li><p>Ability to bake plain old data into the data segment of the
+        executable with genuinely no run-time initialization.</p>
+    </ul>
+  </blockquote>
+
+  <div><a href="https://news.ycombinator.com/item?id=13273504">hsivonen</a></div>
+</div>
+
+<div class="commentary">
+  <blockquote>
+    <p>I haven't developed this thesis fully, but I've been thinking
+      that Rust's model is a better version of functional programming,
+      and we lack a good term for it (since it's obviously not a pure
+      functional language). The point of functional programming is to
+      avoid shared mutable state by eliminating all side effects and
+      using a rich type system that's hopefully easy for the
+      programmer to use. Rust avoids unsafe shared mutable state,
+      without requiring the avoidance of all side effects, and by
+      using an even richer static-analysis system that tracks exactly
+      what side effects are safe.</p>
+
+    <p>Of course, there are a lot of useful things a pure functional
+      programming language gets you, like Haskell's implicit IO
+      scheduling and threading, that Rust doesn't. But for many use
+      cases where functional programming languages are great, they're
+      great for specific reasons that Rust is also great at.</p>
+  </blockquote>
+
+  <div><a href="https://news.ycombinator.com/item?id=13273424">geofft</a></div>
 </div>
