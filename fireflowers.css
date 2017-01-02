@@ -152,3 +152,7 @@ div.commentary > div > a {
 div.commentary > div::before {
     content: "— ";
 }
+
+li {
+    list-style-type: "•  ";
+}
