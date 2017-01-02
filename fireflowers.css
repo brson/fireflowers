@@ -1,4 +1,13 @@
+
+/* Primary text */
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i');
+
+/* Title text */
 @import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do');
 @import url('https://fonts.googleapis.com/css?family=La+Belle+Aurore');
 @import url('https://fonts.googleapis.com/css?family=Alex+Brush');
@@ -12,9 +21,16 @@
     background-color: #F83800;
     color: white;
 
-    font-family: Roboto, sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-family: "Lato", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
+
+    font-family: "Open Sans", sans-serif;
+    font-family: "Muli", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 400;
-    line-height: 1.5em;
+    line-height: 1.6em;
+    /* letter-spacing: 0.05em; */
 }
 
 body {
