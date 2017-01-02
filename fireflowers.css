@@ -23,7 +23,7 @@ body {
     margin-right: 2rem;
 }
 
-body > p, body > h2, body > blockquote {
+div.post-section {
     width: 960px;
     margin-left: auto;
     margin-right: auto;
