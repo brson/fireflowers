@@ -35,8 +35,18 @@
 
 body {
     font-size: 20pt;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+div.post-section > * {
     margin-left: 2rem;
     margin-right: 2rem;
+}
+
+body > div.commentary-container {
+    margin-left: 0rem;
+    margin-right: 0rem;
 }
 
 @media all and (min-width: 960px) {
@@ -149,10 +159,13 @@ p#subtitle + p {
 h3 {
     margin-top: 8rem;
     border-bottom: 2px solid white;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-top: 2rem;
 }
 
 div.commentary-section {
-    border-bottom: 2px solid white;
+    /*border-bottom: 2px solid white;*/
 }
 
 div.post-section > blockquote {
@@ -227,4 +240,21 @@ ul > li {
     div.commentary-column {
         min-width: 30%;
     }
+}
+
+div.commentary-container {
+    padding-bottom: 2rem;
+}
+
+h3,
+div.commentary-container,
+div.commentary-container p,
+div.commentary-container blockquote,
+div.commentary-container ol,
+div.commentary-container ul,
+div.commentary-container li,
+div.commentary-container div,
+div.commentary-container em {
+    background-color: #4D84EB;
+    background-color: black;
 }
