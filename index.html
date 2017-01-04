@@ -70,12 +70,12 @@
 </h2>
 
 <p>
-  In this initial post, Steve emphasizes that "Rust is most well-known
+  In this initial post, Steve says that "Rust is most well-known
   for its features around writing <em>low-level code</em> in a safer
   way than its predecessors. But it’s also a lot more than that."  He
   suggests that Rust brings established modern programming language
   theory to the domain of systems programming, emphasizing a slogan
-  from Rust's Creator, Graydon Hoare:
+  from Rust's creator, Graydon Hoare:
 </p>
 
 <blockquote id="tech-past-quote">
@@ -90,14 +90,17 @@
   Rust includes <em>algebraic data types</em>, common in the ML family
   of languages, and in Rust known as "enums"; and <em>traits</em>,
   which enable polymorphism similar to Haskell's type classes, but
-  fairly unlike C++ classes and templates. Rust innovates is
-  by <em>statically tracking ownership and lifetimes of variables and
-  their references</em>. The ownership system enables Rust to
-  automatically deallocate and run destructors on all values
-  immediately when they go out of scope, and prevents values from
-  being accessed after they go out of scope. It is what makes Rust
-  memory safe and thread safe, and why it doesn't need a GC to
-  accomplish that.
+  fairly unlike C++ classes and templates.
+</p>
+
+<p>
+  How Rust innovates the greatest is by <em>statically tracking
+  ownership and lifetimes of all variables and their
+  references</em>. The ownership system enables Rust to automatically
+  deallocate and run destructors on all values immediately when they
+  go out of scope, and prevents values from being accessed after they
+  are destroyed. It is what makes Rust memory safe and thread safe,
+  and why it doesn't need a GC to accomplish that.
 </p>
 
 <p>
