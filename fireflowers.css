@@ -82,7 +82,8 @@ img#flreqn {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     background-color: black;
 }
 
