@@ -176,8 +176,12 @@ div.post-section > blockquote {
     margin-right: 4rem;
 }
 
-blockquote {
+blockquote,
+blockquote em {
     font-style: italic;
+}
+
+blockquote {
     margin-left: 2rem;
     margin-right: 2rem;
 }
