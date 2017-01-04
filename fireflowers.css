@@ -180,11 +180,6 @@ blockquote {
     margin-right: 2rem;
 }
 
-blockquote, blockquote em {
-    font-style: italic;
-    font-weight: 400;
-}
-
 blockquote > p:first-child::before {
     content: open-quote;
 }
