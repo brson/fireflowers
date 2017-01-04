@@ -37,6 +37,7 @@ body {
     font-size: 20pt;
     margin-left: 0;
     margin-right: 0;
+    padding-bottom: 16rem;
 }
 
 div.post-section > * {
@@ -152,6 +153,10 @@ h2 > img {
     height: 100px;
     margin: 0px;
     margin-right: 2rem;
+}
+
+h2.epilogue {
+    text-align: center;
 }
 
 p#subtitle {
@@ -271,4 +276,9 @@ div.commentary-container div,
 div.commentary-container em {
     background-color: #4D84EB;
     background-color: black;
+}
+
+div.none {
+    text-align: center;
+    margin: 4rem;
 }
