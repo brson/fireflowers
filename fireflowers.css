@@ -81,6 +81,15 @@ img#titleflower {
     margin-top: 4rem;
 }
 
+img#footerflower {
+    width: 400px;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8rem;
+}
+
 div.flreqn {
     background-color: black;
     border-top: 5px solid #FFE044;
@@ -100,15 +109,6 @@ img#flreqn {
 }
 
 h1 {
-    font-family: "Mr De Haviland", cursive;
-    font-family: "Mr Dafoe", cursive;
-
-    font-family: "Alex Brush", cursive;
-    font-family: "Arizonia", cursive;
-
-    font-family: "Mrs Saint Delafield", cursive;
-    font-family: "Nothing You Could Do", cursive;
-    font-family: "Miss Fajardose", cursive;
     font-family: "La Belle Aurore", cursive;
 
     font-size: 300%;
