@@ -71,13 +71,31 @@ em, a {
     font-style: normal;
 }
 
-body img {
+img#titleflower {
     width: 400px;
     height: 400px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 4rem;
+}
+
+div.flreqn {
+    background-color: black;
+    border-top: 5px solid #FFE044;
+    border-bottom: 5px solid #FFE044;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+
+img#flreqn {
+    width: 800px;
+    height: 260px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px;
+    background-color: black;
 }
 
 h1 {
@@ -176,6 +194,7 @@ div.post-section > blockquote {
 }
 
 blockquote {
+    font-style: italic;
     margin-left: 2rem;
     margin-right: 2rem;
 }
